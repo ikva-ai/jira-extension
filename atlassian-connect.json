@@ -2,7 +2,7 @@
      "name": "iKVA Intelligent Insight for Developers",
      "description": "Atlassian Connect app",
      "key": "ai.ikva.jira",
-	"baseUrl": "https://cdn.statically.io/gh/ikva-ai/jira-extension/main/",
+	"baseUrl": "https://cdn.statically.io/gh/ikva-ai/jira-extension/v0.0.2/",
      "vendor": {
          "name": "iKVA Ltd.",
          "url": "http://ikva.ai"
@@ -32,7 +32,7 @@
             "name": {
                 "value": "Insights"
             },
-            "url": "/Left_panel_results"
+            "url": "/Left_panel_results.html"
         },
         {
             "key": "example-issue-right-panel",
