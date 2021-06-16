@@ -1,0 +1,47 @@
+  {
+     "name": "iKVA Intelligent Insight for Developers",
+     "description": "Atlassian Connect app",
+     "key": "ai.ikva.jira",
+	 "baseUrl": "https://f2ca80793acb.ngrok.io",
+     "vendor": {
+         "name": "iKVA Ltd.",
+         "url": "http://ikva.ai"
+     },
+     "authentication": {
+         "type": "none"
+     },
+	 "scopes": [
+	     "read"
+	   ],
+     "apiVersion": 1,
+     "modules": {
+         "generalPages": [
+             {
+                 "url": "/iKVA_main.html",
+                 "key": "iKVA",
+                 "location": "system.top.navigation.bar",
+                 "name": {
+                     "value": "iKVA"
+                 }
+             }
+		 ],
+		 "webPanels": [
+           {
+            "key": "example-issue-left-panel",
+            "location": "atl.jira.view.issue.left.context",
+            "name": {
+                "value": "Insights"
+            },
+            "url": "/Left_pannel_results"            
+        },
+        {
+            "key": "example-issue-right-panel",
+            "location": "atl.jira.view.issue.right.context",
+            "name": {
+                "value": "View insights"
+            },
+            "url": "/Right_pannel_results.html"            
+        }
+       ]
+     }
+}
