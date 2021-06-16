@@ -2,7 +2,7 @@
      "name": "iKVA Intelligent Insight for Developers",
      "description": "Atlassian Connect app",
      "key": "ai.ikva.jira",
-	 "baseUrl": "https://f2ca80793acb.ngrok.io",
+	 "baseUrl": "https://raw.githubusercontent.com/ikva-ai/jira-extension/main/",
      "vendor": {
          "name": "iKVA Ltd.",
          "url": "http://ikva.ai"
