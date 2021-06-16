@@ -32,7 +32,7 @@
             "name": {
                 "value": "Insights"
             },
-            "url": "/Left_pannel_results"
+            "url": "/Left_panel_results"
         },
         {
             "key": "example-issue-right-panel",
@@ -40,7 +40,7 @@
             "name": {
                 "value": "View insights"
             },
-            "url": "/Right_pannel_results.html"
+            "url": "/Right_panel_results.html"
         }
        ]
      }
