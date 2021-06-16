@@ -17,7 +17,7 @@
      "modules": {
          "generalPages": [
              {
-                 "url": "/iKVA_main.html",
+                 "url": "https://raw.githubusercontent.com/ikva-ai/jira-extension/main/iKVA_main.html",
                  "key": "iKVA",
                  "location": "system.top.navigation.bar",
                  "name": {
@@ -32,7 +32,7 @@
             "name": {
                 "value": "Insights"
             },
-            "url": "/Left_pannel_results"            
+            "url": "https://raw.githubusercontent.com/ikva-ai/jira-extension/main/Left_pannel_results"            
         },
         {
             "key": "example-issue-right-panel",
@@ -40,7 +40,7 @@
             "name": {
                 "value": "View insights"
             },
-            "url": "/Right_pannel_results.html"            
+            "url": "https://raw.githubusercontent.com/ikva-ai/jira-extension/main/Right_pannel_results.html"            
         }
        ]
      }
