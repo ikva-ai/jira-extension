@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://unpkg.com/@atlaskit/css-reset@2.0.0/dist/bundle.css" media="all">
+		<link rel="stylesheet" href="https://raw.githubusercontent.com/ikva-ai/jira-extension/main/style/style.css">
+        <script src="https://connect-cdn.atl-paas.net/all.js" async></script>
+        <script src="https://raw.githubusercontent.com/ikva-ai/jira-extension/main/lib/axios.min.js"></script>
+		<script src="https://raw.githubusercontent.com/ikva-ai/jira-extension/main/scripts/iKVA_helper.js"></script>
+		<script>
+			function load(){
+				// get the current issue and render the results
+				getCurrentIssue();
+			}
+			window.onload = load;
+		</script>
+    </head>
+    <body>
+        <section id="content" class="ac-content">
+            <div style="border:1px solid #f18700;margin:10px">
+				<img src="https://raw.githubusercontent.com/ikva-ai/jira-extension/main/assets/iKVA full rgb.png" width="100" style="padding:10px">
+				<h4>StackOverflow</h4>
+				<div class="box">
+					<div id="SO-results" max-height="200px" style="padding-left:30px;padding-right:30px"></div>
+				</div>
+				<h4>Chat</h4>
+				<div class="box">
+					<div id="Chat-results" max-height="200px" style="padding-left:30px;padding-right:30px"></div>
+				</div>
+				<h4>Bugs</h4>
+				<div class="box">
+					<div id="BUGS-results" style="padding-left:30px;padding-right:30px"></div>
+				</div>
+				<h4>Wikipedia</h4>
+				<div class="box">
+					<div id="Wikipedia-results" style="padding-left:30px;padding-right:30px"></div>
+				</div>
+			</div>
+			<p id="error"></p>	
+        </section>
+    </body>
+</html>

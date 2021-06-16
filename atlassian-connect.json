@@ -29,6 +29,10 @@
            {
             "key": "example-issue-left-panel",
             "location": "atl.jira.view.issue.left.context",
+			"layout": {
+			     "height": "100px",
+			},
+		    "weight": 50,
             "name": {
                 "value": "Insights"
             },
