@@ -79,7 +79,7 @@ function getIkvaResultFromText(text,queryURL,elementID){
     }).then((res) => {
      displayResults(res.data,elementID);
   }).catch((error) => {
-    const data = error.response.data;
+    //const data = error.response.data;
 	document.getElementById("error").innerHTML = 'Please try again in a moment or contact support@kvasira.com';
 	});
   }
