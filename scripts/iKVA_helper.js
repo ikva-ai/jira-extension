@@ -7,6 +7,7 @@ var baseURL = 'https://demo.kvasira.com/api';
 var queryURL_so = baseURL+'/corpus/scala-so/query'; //scala stackoverflow
 var queryURL_chat = baseURL+'/corpus/s-gitter/query'; //Scala chat
 var queryURL_bugs = baseURL+'/corpus/scala-gh/query'; //scala Github
+var queryURL_wikipedia = baseURL+'/corpus/enwiki/query'; //wikipedia
 			
 function processIssue(issue){
  var obj = JSON.parse(issue); 
@@ -21,6 +22,7 @@ function processIssue(issue){
  getIKVA_StackOverflowResultFromText(fullIssueText);
  getIKVA_ChatResultFromText(fullIssueText);
  getIKVA_BugsResultFromText(fullIssueText);
+ getIKVA_WikiResultFromText(fullIssueText);
 }
 
 function displayResults(data,elementID){
@@ -59,8 +61,13 @@ function getIKVA_BugsResultFromText(text){
 	getIkvaResultFromText(text,queryURL_bugs,"BUGS-results");
 }
 
+function getIKVA_WikiResultFromText(text){
+	getIkvaResultFromText(text,queryURL_wikipedia,"Wikipedia-results");
+}
+
+Wikipedia
 function getIkvaResultFromText(text,queryURL,elementID){
-  var fullURL = queryURL + '?query_type=text&k=10'
+  var fullURL = queryURL + '?query_type=text&k=5'
   axios.post(fullURL,
     {
       'doc': text,
