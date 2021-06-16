@@ -65,7 +65,6 @@ function getIKVA_WikiResultFromText(text){
 	getIkvaResultFromText(text,queryURL_wikipedia,"Wikipedia-results");
 }
 
-Wikipedia
 function getIkvaResultFromText(text,queryURL,elementID){
   var fullURL = queryURL + '?query_type=text&k=5'
   axios.post(fullURL,
