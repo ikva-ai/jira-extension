@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://unpkg.com/@atlaskit/css-reset@2.0.0/dist/bundle.css" media="all">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://connect-cdn.atl-paas.net/all.js" async></script>
+    <script src="lib/axios.min.js"></script>
+    <script src="scripts/iKVA_helper.js"></script>
+    <script>
+     function openKPack(evt, cityName) {
+       // Declare all variables
+       var i, tabcontent, tablinks;
+
+       // Get all elements with class="tabcontent" and hide them
+       tabcontent = document.getElementsByClassName("tabcontent");
+       for (i = 0; i < tabcontent.length; i++) {
+         tabcontent[i].style.display = "none";
+       }
+
+       // Get all elements with class="tablinks" and remove the class "active"
+       tablinks = document.getElementsByClassName("tablinks");
+       for (i = 0; i < tablinks.length; i++) {
+         tablinks[i].className = tablinks[i].className.replace(" active", "");
+       }
+
+       // Show the current tab, and add an "active" class to the button that opened the tab
+       document.getElementById(cityName).style.display = "block";
+       evt.currentTarget.className += " active";
+     }
+    </script>
+    <script>
+     function load(){
+       document.getElementById("defaultOpen").click();
+       // get the current issue and render the results
+       getCurrentIssue();
+     }
+     window.onload = load;
+    </script>
+  </head>
+  <body>
+    <section id="content" class="ac-content">
+      <div style="border:1px solid #f18700;margin:10px">
+        <img src="assets/iKVA full rgb.png" width="100" style="padding:10px">
+        <!-- Tab links -->
+        <div class="tab">
+          <button class="tablinks" onclick="openKPack(event, 'SO')" id="defaultOpen">StackOverflow</button>
+          <button class="tablinks" onclick="openKPack(event, 'Chat')">Chat sessions</button>
+          <button class="tablinks" onclick="openKPack(event, 'Bugs')">Related Bugs</button>
+        </div>
+
+        <!-- Tab content -->
+        <div id="SO" class="tabcontent">
+          <h3>StackOverflow</h3>
+          <div id="SO-results" style="padding-left:30px;padding-right:30px"></div>
+        </div>
+
+        <div id="Chat" class="tabcontent">
+          <h3>Chat</h3>
+          <div id="Chat-results" style="padding-left:30px;padding-right:30px"></div>
+        </div>
+
+        <div id="Bugs" class="tabcontent">
+          <h3>Bugs</h3>
+          <div id="BUGS-results" style="padding-left:30px;padding-right:30px"></div>
+        </div>
+      </div>
+      <p id="error"></p>
+    </section>
+  </body>
+</html>
