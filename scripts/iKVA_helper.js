@@ -71,7 +71,7 @@ function getIkvaResultFromText(text,queryURL,elementID){
     {
       'doc': text,
       'application': {
-        'id': 'chrome',
+        'id': 'jira',
         'metadata': {
         },
       }
